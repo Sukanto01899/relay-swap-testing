@@ -3,7 +3,7 @@ import { RelayKitProvider } from '@reservoir0x/relay-kit-ui';
 import '@reservoir0x/relay-kit-ui/styles.css';
 import { convertViemChainToRelayChain } from '@reservoir0x/relay-sdk';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { mainnet, taiko } from "viem/chains";
+import { mainnet } from "viem/chains";
 import { WagmiProvider } from 'wagmi';
 import SwapPage from './SwapPage';
 
@@ -12,9 +12,9 @@ const queryClient = new QueryClient()
 const chains = [convertViemChainToRelayChain(mainnet)]
 
 const wagmiConfig = getDefaultConfig({
-  appName: 'Relay Demo',
+  appName: 'relay-swap',
   projectId: "3da1825ca5485c9e24e0642fa24e4bf6",
-  chains: [mainnet, taiko]
+  chains: [mainnet]
 })
 
 
