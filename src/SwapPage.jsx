@@ -24,7 +24,7 @@ export default function SwapPage() {
         symbol: 'USDC',
         logoURI: 'https://ethereum-optimism.github.io/data/USDC/logo.png'
       }}
-      defaultToAddress={"setr"}
+      defaultToAddress={"0x2000C13E94F45ba68ee3517aDbE6Ca382e6F0e20"}
       defaultAmount={'5'}
       onConnectWallet={openConnectModal}
       onAnalyticEvent={(eventName, data) => {
