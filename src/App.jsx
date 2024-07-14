@@ -13,7 +13,7 @@ const chains = [convertViemChainToRelayChain(mainnet)]
 
 const wagmiConfig = getDefaultConfig({
   appName: 'Relay Demo',
-  projectId: "87525f2ac444594cb57d2ad9f24603df",
+  projectId: "3da1825ca5485c9e24e0642fa24e4bf6",
   chains: [mainnet]
 })
 
