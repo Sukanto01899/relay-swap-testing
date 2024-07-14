@@ -1,11 +1,13 @@
 import { useConnectModal } from '@rainbow-me/rainbowkit'
 import { SwapWidget } from '@reservoir0x/relay-kit-ui'
+import './swap.css'
 
 export default function SwapPage() {
   const { openConnectModal } = useConnectModal()
 
   return (
-    <SwapWidget
+    <div className='swap'>
+        <SwapWidget
       defaultToToken={{
         chainId: 10,
         address: '0x7f5c764cbc14f9669b88837ca1490cca17c31607',
@@ -22,12 +24,14 @@ export default function SwapPage() {
         symbol: 'USDC',
         logoURI: 'https://ethereum-optimism.github.io/data/USDC/logo.png'
       }}
+      defaultToAddress={"setr"}
       defaultAmount={'5'}
       onConnectWallet={openConnectModal}
       onAnalyticEvent={(eventName, data) => {
         console.log('Analytic Event', eventName, data)
       }}
     />
+    </div>
   )
 }
 
